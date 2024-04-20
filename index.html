@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #181818; /* Dark background color */
+            color: #fff; /* White text color */
+        }
+
+        header {
+            background-color: #212121; /* Dark header background */
+            padding-block: 20px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #fff; /* White text color */
+            text-align: center;
+        }
+
+        main {
+            margin-top: 70px;
+            padding: 20px;
+        }
+
+        .subject-list {
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+        }
+
+        .subject-item {
+            margin: 20px 0; /* Added margin between items and heading */
+            background-color: #282828; /* Darker blue for list items */
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .subject-item:hover {
+            transform: scale(1.05);
+        }
+
+        .subject-link {
+            text-decoration: none;
+            color: #fff; /* White text color for links */
+            font-weight: bold;
+            display: block;
+            padding: 20px;
+            border-radius: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .subject-link:hover {
+            background-color: #475259; /* Slightly lighter blue on hover */
+        }
+
+        .dropdown-options {
+            display: none;
+            padding: 10px;
+            background-color: #282828; /* Darker blue for dropdown background */
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .subject-item.active .dropdown-options {
+            display: block;
+        }
+
+        .dropdown-link {
+            text-decoration: none;
+            color: #fff; /* White text color for dropdown links */
+            display: block;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-link:hover {
+            background-color: #475259; /* Slightly lighter blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BCA 6th SEM Subjects</h1>
+    </header>
+
+    <main>
+        <ul class="subject-list">
+            <li class="subject-item" onclick="toggleDropdown(this)">
+                <a href="#" class="subject-link">Java</a>
+                <div class="dropdown-options">
+                    <a href="javaunit1.html" class="dropdown-link">Unit 1</a>
+                    <!-- <a href="javaunit2.html" class="dropdown-link">Unit 2</a> -->
+                    <!-- <a href="javaunit3.html" class="dropdown-link">Unit 3</a> -->
+                    <!-- <a href="#" class="dropdown-link">Unit 4</a> -->
+                </div>
+            </li>
+            <li class="subject-item" onclick="toggleDropdown(this)">
+                <a href="#" class="subject-link">AI (Artificial Intelligence)</a>
+                <div class="dropdown-options">
+                    <!-- <a href="AIunit1.html" class="dropdown-link">Unit 1</a> -->
+                    <!-- <a href="AIunit2.html" class="dropdown-link">Unit 2</a> -->
+                    <!-- <a href="#" class="dropdown-link">Unit 3</a> -->
+                    <!-- <a href="#" class="dropdown-link">Unit 4</a> -->
+                </div>
+            </li>
+            <li class="subject-item" onclick="toggleDropdown(this)">
+                <a href="#" class="subject-link">Dot Net (Introduction to .Net)</a>
+                <div class="dropdown-options">
+                    <!-- <a href="dotNetunit1.html" class="dropdown-link">Unit 1</a> -->
+                    <!-- <a href="#" class="dropdown-link">Unit 2</a> -->
+                    <!-- <a href="#" class="dropdown-link">Unit 3</a> -->
+                    <!-- <a href="#" class="dropdown-link">Unit 4</a> -->
+                </div>
+            </li>
+            <li class="subject-item" onclick="toggleDropdown(this)">
+                <a href="#" class="subject-link">E-Commerce</a>
+                <div class="dropdown-options">
+                    <!-- <a href="#" class="dropdown-link">Unit 1</a> -->
+                    <!-- <a href="#" class="dropdown-link">Unit 2</a> -->
+                    <!-- <a href="#" class="dropdown-link">Unit 3</a> -->
+                    <!-- <a href="#" class="dropdown-link">Unit 4</a> -->
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <script>
+        function toggleDropdown(subjectItem) {
+            // Toggle the active class on the clicked subject item
+            subjectItem.classList.toggle('active');
+
+            // Close all other dropdowns
+            const allSubjectItems = document.querySelectorAll('.subject-item');
+            allSubjectItems.forEach(item => {
+                if (item !== subjectItem && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
+<!--  ssh-keygen -t rsa -b 4096 -C "ishmeet3j@gmail.com" -->
